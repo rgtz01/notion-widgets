@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Tools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: transparent !important;
+            margin: 0;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            margin: auto;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        .branding {
+            font-size: 14px;
+            color: white;
+            margin-bottom: 3px;
+        }
+        h1 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2e7cd1;
+            margin-bottom: 10px;
+        }
+        /* Style for the "Dopamine Hacks" heading */
+        h1.pink-heading {
+            color: #9317A8; 
+        }
+        .tip-box {
+            background: rgba(46, 124, 209, 0.15); /* Dark-muted blue */
+            color: #3177C7;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .hack-box {
+            background: rgba(147, 23, 168, 0.15); /* Dark-muted pink */
+            color: #9317a8;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        /* White text for the tip and hack content */
+        .tip-text, .hack-text {
+            font-size: 15px;
+            font-style: italic;
+            display: block;
+            padding: 8px;
+            color: white; /* Set text color to white */
+        }
+        .refresh-button {
+            background-color: #2e7cd1;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 5px;
+        }
+        .refresh-button:hover {
+            background-color: #255a9b;
+        }
+        .refresh-button.pink {
+            background-color: #9317a8;
+        }
+        .refresh-button.pink:hover {
+            background-color: #7d138c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="branding">mySpace</div>
+        <h1>ADHD Focus Tips</h1>
+        <div class="tip-box">
+            <span class="tip-text" id="focusTip">"The 5-Second Rule ⏳ – Count down from 5 and take action before you can overthink."</span>
+            <button class="refresh-button" onclick="generateFocusTip()">🎲 New Tip</button>
+        </div>
+        <h1 class="pink-heading">Dopamine Hacks</h1>
+        <div class="hack-box">
+            <span class="hack-text" id="dopamineHack">"Move Your Body 💃 – Dance, stretch, or do 10 jumping jacks for an instant boost."</span>
+            <button class="refresh-button pink" onclick="generateDopamineHack()">🎲 New Hack</button>
+        </div>
+    </div>
+
+    <script>
+        const focusTips = [
+            "The 5-Second Rule ⏳ – Count down from 5 and take action before you can overthink.",
+            "Body Doubling 👯 – Work next to someone or stream a focus video.",
+            "Change Your Scenery 🌍 – A different workspace can reset your brain.",
+            "Use a Visual Timer ⏲️ – Seeing time pass helps with urgency.",
+            "Make it a Game 🎮 – Race the clock or set rewards for progress.",
+            "Microtasks 📌 – Break tasks into 5-minute chunks to reduce overwhelm.",
+            "Talk It Out 🗣️ – Say your task out loud to trick your brain into commitment.",
+            "Task Roulette 🎰 – Pick a random task just to start; momentum will follow.",
+            "Parkinson’s Law ⚡ – Set fake deadlines to complete tasks faster.",
+            "First 2 Minutes Rule ✅ – If a task takes less than 2 minutes, do it immediately."
+        ];
+
+        const dopamineHacks = [
+            "Move Your Body 💃 – Dance, stretch, or do 10 jumping jacks for an instant boost.",
+            "Drink Cold Water ❄️ – Hydration + cold shock = instant dopamine boost.",
+            "Light a Candle 🕯️ – Scents trigger brain focus (peppermint, citrus, etc.).",
+            "Eat Protein 🍳 – Dopamine needs fuel (nuts, eggs, fish).",
+            "Do a Fun Task First 🎢 – Warm up with something enjoyable before hard work.",
+            "Playlist Boost 🎵 – Listen to an ADHD ‘hype’ playlist before starting a task.",
+            "Watch a Funny Clip 😂 – A 30-sec laugh can reset dopamine.",
+            "Go Outside ☀️ – Sunlight = serotonin = dopamine.",
+            "Visual Progress 📊 – Use stickers, streaks, or progress bars for motivation.",
+            "Positive Self-Talk 💪 – Tell yourself, ‘I am the kind of person who…’ and act like it.",
+            "Background Music 🎶 – Binaural beats or lo-fi can keep you on track.",
+            "Novelty Works 🔄 – Change how you do a task to make it fresh.",
+            "Tactile Stimulation 🖐️ – Hold a stress ball, chew gum, or fidget.",
+            "Gamify It 🎯 – Give yourself XP, rewards, or levels.",
+            "Random Reward System 🎲 – Roll a die or spin a wheel when you complete a task."
+        ];
+
+        function generateFocusTip() {
+            const randomIndex = Math.floor(Math.random() * focusTips.length);
+            document.getElementById("focusTip").innerText = `"${focusTips[randomIndex]}"`;
+        }
+
+        function generateDopamineHack() {
+            const randomIndex = Math.floor(Math.random() * dopamineHacks.length);
+            document.getElementById("dopamineHack").innerText = `"${dopamineHacks[randomIndex]}"`;
+        }
+    </script>
+</body>
+</html>
